@@ -1,6 +1,5 @@
 package com.example.demo.entity;
 
-import java.math.BigDecimal;
 import java.sql.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -26,8 +25,9 @@ public class Solicitud {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idSolicitud;
-	private BigDecimal tasa;
+	private double tasa;
 	private int dias;
+	private double montoSolicitado;
 	
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
